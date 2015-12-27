@@ -2,15 +2,15 @@ package tiendaOrdenadores;
 
 import javax.swing.JOptionPane;
 
-public class jpEscuderia extends javax.swing.JFrame {
+public class jpTienda extends javax.swing.JFrame {
 
     static int id;
     
-    public jpEscuderia(int idEscuderia) {
+    public jpTienda(int idTienda) {
         initComponents();
-        id = idEscuderia;
-        this.setTitle ("Dueño Escuderia");
-        setDefaultCloseOperation(jpEscuderia.DISPOSE_ON_CLOSE);
+        id = idTienda;
+        this.setTitle ("Encargado Tiendas");
+        setDefaultCloseOperation(jpTienda.DISPOSE_ON_CLOSE);
     }
 
     /** This method is called from within the constructor to

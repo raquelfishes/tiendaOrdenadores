@@ -30,7 +30,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,22 +57,27 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                  <Component id="Accion" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel4" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
+                          <Component id="Accion" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane1" min="-2" pref="562" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -80,13 +85,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jPanel4" alignment="0" max="32767" attributes="1"/>
                       <Component id="jPanel3" alignment="0" max="32767" attributes="1"/>
                       <Component id="jPanel2" alignment="0" max="32767" attributes="1"/>
+                      <Component id="jPanel5" alignment="0" max="32767" attributes="1"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="Accion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="156" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
@@ -98,7 +103,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Escuderias:"/>
+                <TitledBorder title="Tiendas:"/>
               </Border>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -110,12 +115,12 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="bAnyadirEscuderia" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bModificarEscuderia" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bBorrarEscuderia" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bConsultarEscuderia" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bAnyadirTienda" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bModificarTienda" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bBorrarTienda" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bConsultarTienda" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -123,49 +128,52 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                      <Component id="bAnyadirEscuderia" min="-2" max="-2" attributes="0"/>
+                      <Component id="bAnyadirTienda" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bModificarEscuderia" min="-2" max="-2" attributes="0"/>
+                      <Component id="bModificarTienda" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bBorrarEscuderia" min="-2" max="-2" attributes="0"/>
+                      <Component id="bBorrarTienda" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bConsultarEscuderia" min="-2" max="-2" attributes="0"/>
+                      <Component id="bConsultarTienda" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JRadioButton" name="bAnyadirEscuderia">
+            <Component class="javax.swing.JRadioButton" name="bAnyadirTienda">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="Agrupados"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Escuderia"/>
+                <Property name="text" type="java.lang.String" value="A&#xf1;adir Tienda"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnyadirTiendaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bModificarTienda">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Modificar Tienda"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bModificarEscuderia">
+            <Component class="javax.swing.JRadioButton" name="bBorrarTienda">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="Agrupados"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Modificar Escuderia"/>
+                <Property name="text" type="java.lang.String" value="Borrar Tienda"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bBorrarEscuderia">
+            <Component class="javax.swing.JRadioButton" name="bConsultarTienda">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="Agrupados"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Borrar Escuderia"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="bConsultarEscuderia">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="Agrupados"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Consultar Escuderia"/>
+                <Property name="text" type="java.lang.String" value="Consultar Tienda"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -174,7 +182,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Pilotos:"/>
+                <TitledBorder title="Empleados:"/>
               </Border>
             </Property>
           </Properties>
@@ -185,12 +193,12 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="bAnyadirPiloto" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bModificarPiloto" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bBorrarPiloto" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bConsultarPiloto" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bAnyadirEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bModificarEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bBorrarEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bConsultarEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -198,124 +206,52 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="bAnyadirPiloto" min="-2" max="-2" attributes="0"/>
+                      <Component id="bAnyadirEmpleado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bModificarPiloto" min="-2" max="-2" attributes="0"/>
+                      <Component id="bModificarEmpleado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bBorrarPiloto" min="-2" max="-2" attributes="0"/>
+                      <Component id="bBorrarEmpleado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bConsultarPiloto" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="33" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JRadioButton" name="bAnyadirPiloto">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="Agrupados"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Piloto"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="bModificarPiloto">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="Agrupados"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Modificar Piloto"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="bBorrarPiloto">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="Agrupados"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Borrar Piloto"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="bConsultarPiloto">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="Agrupados"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Consultar Piloto"/>
-              </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel4">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Circuitos:"/>
-              </Border>
-            </Property>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="bAnyadirCircuito" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bModificarCircuito" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bBorrarCircuito" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="bConsultarCircuito" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="bAnyadirCircuito" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bModificarCircuito" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bBorrarCircuito" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="bConsultarCircuito" min="-2" max="-2" attributes="0"/>
+                      <Component id="bConsultarEmpleado" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JRadioButton" name="bAnyadirCircuito">
+            <Component class="javax.swing.JRadioButton" name="bAnyadirEmpleado">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="Agrupados"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="A&#xf1;adir Circuito"/>
+                <Property name="text" type="java.lang.String" value="A&#xf1;adir Empleado"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAnyadirEmpleadoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bModificarEmpleado">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Modificar Empleado"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bModificarCircuito">
+            <Component class="javax.swing.JRadioButton" name="bBorrarEmpleado">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="Agrupados"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Modificar Circuito"/>
+                <Property name="text" type="java.lang.String" value="Borrar Empleado"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="bBorrarCircuito">
+            <Component class="javax.swing.JRadioButton" name="bConsultarEmpleado">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="Agrupados"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Borrar Circuito"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="bConsultarCircuito">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="Agrupados"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Consultar Circuito"/>
+                <Property name="text" type="java.lang.String" value="Consultar Empleado"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -343,6 +279,121 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AccionActionPerformed"/>
           </Events>
         </Component>
+        <Container class="javax.swing.JPanel" name="jPanel5">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Productos:"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="bAnyadirProducto" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bModificarProducto" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bBorrarProducto" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bConfigurarOrdenador" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bConsultarProducto2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bVenderProducto" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bConsultarProducto4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="bAnyadirProducto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="bModificarProducto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="bBorrarProducto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="bConsultarProducto2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="bVenderProducto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="bConfigurarOrdenador" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="bConsultarProducto4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JRadioButton" name="bAnyadirProducto">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="A&#xf1;adir Producto"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bModificarProducto">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Modificar Producto"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bBorrarProducto">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Borrar Producto"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bConfigurarOrdenador">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Configurar Ordenador"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bConsultarProducto2">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Consultar Producto"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bVenderProducto">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Vender Producto"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVenderProductoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="bConsultarProducto4">
+              <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="Agrupados"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Consultar Cat&#xe1;logo"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bConsultarProducto4ActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

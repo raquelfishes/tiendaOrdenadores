@@ -1,2 +1,0 @@
-tiendaOrdenadores.Escuderia
-tiendaOrdenadores.EquipoCarrera

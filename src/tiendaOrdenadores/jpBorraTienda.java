@@ -4,12 +4,12 @@
  */
 package tiendaOrdenadores;
 
-public class jpBorraEscuderia extends javax.swing.JPanel {
+public class jpBorraTienda extends javax.swing.JPanel {
 
-    public jpBorraEscuderia() {
+    public jpBorraTienda() {
         initComponents();
-        listaescuderias.setText(Formula1UI.formula1.mostrarEscuderias()
-         +"El numero total de escuderias es: " + Formula1UI.formula1.escuderias.size());
+        listaTiendas.setText(TiendaOrdenadoresUI.tiendaOrdenadores.mostrarTiendas()
+         +"El numero total de tiendas es: " + TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.size());
     }
 
     /** This method is called from within the constructor to
@@ -23,20 +23,20 @@ public class jpBorraEscuderia extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listaescuderias = new javax.swing.JTextArea();
+        listaTiendas = new javax.swing.JTextArea();
         Numero = new javax.swing.JTextField();
         N = new javax.swing.JLabel();
         Pregunta = new javax.swing.JLabel();
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar Escuderia"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Borrar Tienda"));
 
-        listaescuderias.setColumns(20);
-        listaescuderias.setRows(5);
-        jScrollPane1.setViewportView(listaescuderias);
+        listaTiendas.setColumns(20);
+        listaTiendas.setRows(5);
+        jScrollPane1.setViewportView(listaTiendas);
 
         N.setText("Nº");
 
-        Pregunta.setText("¿Qué escuderia quieres borrar?");
+        Pregunta.setText("¿Qué tienda quieres borrar?");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -54,7 +54,7 @@ public class jpBorraEscuderia extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(316, 316, 316)
                         .addComponent(Numero, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addContainerGap(336, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +97,7 @@ public int getNumero(){
     private javax.swing.JLabel Pregunta;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea listaescuderias;
+    private javax.swing.JTextArea listaTiendas;
     // End of variables declaration//GEN-END:variables
 
 }

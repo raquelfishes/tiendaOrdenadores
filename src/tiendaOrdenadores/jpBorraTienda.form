@@ -38,7 +38,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Borrar Escuderia"/>
+            <TitledBorder title="Borrar Tienda"/>
           </Border>
         </Property>
       </Properties>
@@ -62,7 +62,7 @@
                           <Component id="Numero" min="-2" pref="65" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="316" max="32767" attributes="0"/>
+                  <EmptySpace pref="336" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -90,7 +90,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="listaescuderias">
+            <Component class="javax.swing.JTextArea" name="listaTiendas">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -107,7 +107,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="Pregunta">
           <Properties>
-            <Property name="text" type="java.lang.String" value="&#xbf;Qu&#xe9; escuderia quieres borrar?"/>
+            <Property name="text" type="java.lang.String" value="&#xbf;Qu&#xe9; tienda quieres borrar?"/>
           </Properties>
         </Component>
       </SubComponents>

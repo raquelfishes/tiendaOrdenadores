@@ -22,21 +22,21 @@ public class Ficheros {
         output = new ObjectOutputStream (fileO);
     }
 
-    public Formula1 leer() throws IOException, ClassNotFoundException  {
-        Formula1 f=null;
+    public TiendaOrdenadores leer() throws IOException, ClassNotFoundException  {
+        TiendaOrdenadores f=null;
         if (input!=null) {
-                f=(Formula1) input.readObject();
-                Escuderia.contador = input.readInt();
+                f=(TiendaOrdenadores) input.readObject();
+                //Escuderia.contador = input.readInt();
         }
        return f;
     }
 
-    public void escribir (Formula1 f)
+    public void escribir (TiendaOrdenadores f)
             throws IOException
     {
         if (output!=null)
             output.writeObject(f);
-            output.writeInt(Escuderia.contador);
+            //output.writeInt(Escuderia.contador);
     }
 
     public void cerrar() throws IOException{

@@ -4,12 +4,12 @@
  */
 package tiendaOrdenadores;
 
-public class jpConsultaEscuderia extends javax.swing.JPanel {
+public class jpConsultaTienda extends javax.swing.JPanel {
 
-    public jpConsultaEscuderia() {
+    public jpConsultaTienda() {
         initComponents();
-        listaescuderias.setText(Formula1UI.formula1.mostrarEscuderias()
-         +"El numero total de escuderias es: " + Formula1UI.formula1.escuderias.size());
+        listaescuderias.setText(TiendaOrdenadoresUI.tiendaOrdenadores.mostrarTiendas()
+         +"El numero total de tiendas es: " + TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.size());
     }
 
     /** This method is called from within the constructor to

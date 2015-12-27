@@ -26,42 +26,50 @@ public class jpAdmin extends javax.swing.JFrame {
         Agrupados = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        bAnyadirEscuderia = new javax.swing.JRadioButton();
-        bModificarEscuderia = new javax.swing.JRadioButton();
-        bBorrarEscuderia = new javax.swing.JRadioButton();
-        bConsultarEscuderia = new javax.swing.JRadioButton();
+        bAnyadirTienda = new javax.swing.JRadioButton();
+        bModificarTienda = new javax.swing.JRadioButton();
+        bBorrarTienda = new javax.swing.JRadioButton();
+        bConsultarTienda = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
-        bAnyadirPiloto = new javax.swing.JRadioButton();
-        bModificarPiloto = new javax.swing.JRadioButton();
-        bBorrarPiloto = new javax.swing.JRadioButton();
-        bConsultarPiloto = new javax.swing.JRadioButton();
-        jPanel4 = new javax.swing.JPanel();
-        bAnyadirCircuito = new javax.swing.JRadioButton();
-        bModificarCircuito = new javax.swing.JRadioButton();
-        bBorrarCircuito = new javax.swing.JRadioButton();
-        bConsultarCircuito = new javax.swing.JRadioButton();
+        bAnyadirEmpleado = new javax.swing.JRadioButton();
+        bModificarEmpleado = new javax.swing.JRadioButton();
+        bBorrarEmpleado = new javax.swing.JRadioButton();
+        bConsultarEmpleado = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Resultados = new javax.swing.JTextArea();
         Accion = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        bAnyadirProducto = new javax.swing.JRadioButton();
+        bModificarProducto = new javax.swing.JRadioButton();
+        bBorrarProducto = new javax.swing.JRadioButton();
+        bConfigurarOrdenador = new javax.swing.JRadioButton();
+        bConsultarProducto2 = new javax.swing.JRadioButton();
+        bVenderProducto = new javax.swing.JRadioButton();
+        bConsultarProducto4 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Administrador"));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Escuderias:"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Tiendas:"));
         jPanel2.setToolTipText("");
 
-        Agrupados.add(bAnyadirEscuderia);
-        bAnyadirEscuderia.setText("Añadir Escuderia");
+        Agrupados.add(bAnyadirTienda);
+        bAnyadirTienda.setText("Añadir Tienda");
+        bAnyadirTienda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirTiendaActionPerformed(evt);
+            }
+        });
 
-        Agrupados.add(bModificarEscuderia);
-        bModificarEscuderia.setText("Modificar Escuderia");
+        Agrupados.add(bModificarTienda);
+        bModificarTienda.setText("Modificar Tienda");
 
-        Agrupados.add(bBorrarEscuderia);
-        bBorrarEscuderia.setText("Borrar Escuderia");
+        Agrupados.add(bBorrarTienda);
+        bBorrarTienda.setText("Borrar Tienda");
 
-        Agrupados.add(bConsultarEscuderia);
-        bConsultarEscuderia.setText("Consultar Escuderia");
+        Agrupados.add(bConsultarTienda);
+        bConsultarTienda.setText("Consultar Tienda");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -70,39 +78,44 @@ public class jpAdmin extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bAnyadirEscuderia)
-                    .addComponent(bModificarEscuderia)
-                    .addComponent(bBorrarEscuderia)
-                    .addComponent(bConsultarEscuderia))
-                .addContainerGap(10, Short.MAX_VALUE))
+                    .addComponent(bAnyadirTienda)
+                    .addComponent(bModificarTienda)
+                    .addComponent(bBorrarTienda)
+                    .addComponent(bConsultarTienda))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(bAnyadirEscuderia)
+                .addComponent(bAnyadirTienda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bModificarEscuderia)
+                .addComponent(bModificarTienda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bBorrarEscuderia)
+                .addComponent(bBorrarTienda)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bConsultarEscuderia)
+                .addComponent(bConsultarTienda)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Pilotos:"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Empleados:"));
 
-        Agrupados.add(bAnyadirPiloto);
-        bAnyadirPiloto.setText("Añadir Piloto");
+        Agrupados.add(bAnyadirEmpleado);
+        bAnyadirEmpleado.setText("Añadir Empleado");
+        bAnyadirEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAnyadirEmpleadoActionPerformed(evt);
+            }
+        });
 
-        Agrupados.add(bModificarPiloto);
-        bModificarPiloto.setText("Modificar Piloto");
+        Agrupados.add(bModificarEmpleado);
+        bModificarEmpleado.setText("Modificar Empleado");
 
-        Agrupados.add(bBorrarPiloto);
-        bBorrarPiloto.setText("Borrar Piloto");
+        Agrupados.add(bBorrarEmpleado);
+        bBorrarEmpleado.setText("Borrar Empleado");
 
-        Agrupados.add(bConsultarPiloto);
-        bConsultarPiloto.setText("Consultar Piloto");
+        Agrupados.add(bConsultarEmpleado);
+        bConsultarEmpleado.setText("Consultar Empleado");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -111,64 +124,23 @@ public class jpAdmin extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bAnyadirPiloto)
-                    .addComponent(bModificarPiloto)
-                    .addComponent(bBorrarPiloto)
-                    .addComponent(bConsultarPiloto))
-                .addContainerGap(48, Short.MAX_VALUE))
+                    .addComponent(bAnyadirEmpleado)
+                    .addComponent(bModificarEmpleado)
+                    .addComponent(bBorrarEmpleado)
+                    .addComponent(bConsultarEmpleado))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(bAnyadirPiloto)
+                .addComponent(bAnyadirEmpleado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bModificarPiloto)
+                .addComponent(bModificarEmpleado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bBorrarPiloto)
+                .addComponent(bBorrarEmpleado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bConsultarPiloto)
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Circuitos:"));
-
-        Agrupados.add(bAnyadirCircuito);
-        bAnyadirCircuito.setText("Añadir Circuito");
-
-        Agrupados.add(bModificarCircuito);
-        bModificarCircuito.setText("Modificar Circuito");
-
-        Agrupados.add(bBorrarCircuito);
-        bBorrarCircuito.setText("Borrar Circuito");
-
-        Agrupados.add(bConsultarCircuito);
-        bConsultarCircuito.setText("Consultar Circuito");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bAnyadirCircuito)
-                    .addComponent(bModificarCircuito)
-                    .addComponent(bBorrarCircuito)
-                    .addComponent(bConsultarCircuito))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(bAnyadirCircuito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bModificarCircuito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bBorrarCircuito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bConsultarCircuito)
+                .addComponent(bConsultarEmpleado)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -183,34 +155,107 @@ public class jpAdmin extends javax.swing.JFrame {
             }
         });
 
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Productos:"));
+
+        Agrupados.add(bAnyadirProducto);
+        bAnyadirProducto.setText("Añadir Producto");
+
+        Agrupados.add(bModificarProducto);
+        bModificarProducto.setText("Modificar Producto");
+
+        Agrupados.add(bBorrarProducto);
+        bBorrarProducto.setText("Borrar Producto");
+
+        Agrupados.add(bConfigurarOrdenador);
+        bConfigurarOrdenador.setText("Configurar Ordenador");
+
+        Agrupados.add(bConsultarProducto2);
+        bConsultarProducto2.setText("Consultar Producto");
+
+        Agrupados.add(bVenderProducto);
+        bVenderProducto.setText("Vender Producto");
+        bVenderProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bVenderProductoActionPerformed(evt);
+            }
+        });
+
+        Agrupados.add(bConsultarProducto4);
+        bConsultarProducto4.setText("Consultar Catálogo");
+        bConsultarProducto4.setToolTipText("");
+        bConsultarProducto4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bConsultarProducto4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bAnyadirProducto)
+                    .addComponent(bModificarProducto)
+                    .addComponent(bBorrarProducto)
+                    .addComponent(bConfigurarOrdenador)
+                    .addComponent(bConsultarProducto2)
+                    .addComponent(bVenderProducto)
+                    .addComponent(bConsultarProducto4))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(bAnyadirProducto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bModificarProducto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bBorrarProducto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bConsultarProducto2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bVenderProducto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bConfigurarOrdenador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bConsultarProducto4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(221, 221, 221)
-                .addComponent(Accion))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(221, 221, 221)
+                        .addComponent(Accion))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Accion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
@@ -222,7 +267,7 @@ public class jpAdmin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,84 +282,86 @@ public class jpAdmin extends javax.swing.JFrame {
 
     private void AccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccionActionPerformed
 
-    //Añade Escuderia
-        if(bAnyadirEscuderia.isSelected()){
-            jpAñadeEscuderia pAñade = new jpAñadeEscuderia();
-            if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Escuderia",
+    //Añade Tienda
+        if(bAnyadirTienda.isSelected()){
+            jpAñadeTienda pAñade = new jpAñadeTienda();
+            if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Tienda",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
             == JOptionPane.OK_OPTION) {
-                    Escuderia escuderia = new Escuderia(pAñade.getNombre(), pAñade.getPais(),
-                    pAñade.getAnyoFundacion(), pAñade.getPresupuesto(), pAñade.getDirectivos());
-                Formula1UI.formula1.añadirEscuderia(escuderia);
-                Resultados.setText ("La escuderia se ha insertado satisfactoriamente");
+                    Tienda tienda = new Tienda(pAñade.getNombre(), pAñade.getDireccion(),
+                    pAñade.getHorarioApertura(), null);
+                TiendaOrdenadoresUI.tiendaOrdenadores.añadirTienda(tienda);
+                Resultados.setText ("La tienda se ha insertado satisfactoriamente");
             }
         }
-    //Modificar Escuderia
-        else if(bModificarEscuderia.isSelected()){
-          if(!Formula1UI.formula1.escuderias.isEmpty()){
-            jpEditaEscuderia pEdita = new jpEditaEscuderia();
-            if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Escuderia",
+    //Modificar Tienda
+        else if(bModificarTienda.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.isEmpty()){
+            jpEditaTienda pEdita = new jpEditaTienda();
+            if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Tienda",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
             == JOptionPane.OK_OPTION) {
                 try {
-                    Formula1UI.formula1.modificarEscuderia(pEdita.getNumero()-1, pEdita.getNombre(), pEdita.getPais(),
-                            pEdita.getAnyoFundacion(), pEdita.getPresupuesto());
+                    TiendaOrdenadoresUI.tiendaOrdenadores.modificarTienda(pEdita.getNumero()-1, pEdita.getNombre(), pEdita.getDireccion(),
+                            pEdita.getHorarioApertura());
                 } catch (ParseException ex) {
                     Logger.getLogger(jpAdmin.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                Resultados.setText ("La escuderia se ha modificado satisfactoriamente");
+                Resultados.setText ("La tienda se ha modificado satisfactoriamente");
             }
-          }
+          }else{
+              Resultados.setText ("No hay tiendas");
+            }
         }
-    //Borrar Escuderia
-        else if(bBorrarEscuderia.isSelected()){
-          if(!Formula1UI.formula1.escuderias.isEmpty()){
-            jpBorraEscuderia pBorra = new jpBorraEscuderia();
-            if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Escuderia",
+    //Borrar Tienda
+        else if(bBorrarTienda.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.isEmpty()){
+            jpBorraTienda pBorra = new jpBorraTienda();
+            if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Tienda",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    Escuderia escuderia=Formula1UI.formula1.escuderias.get(pBorra.getNumero()-1);
-                    Formula1UI.formula1.borrarEscuderia(escuderia);
-                    Resultados.setText ("La escuderia se ha borrado satisfactoriamente");
+                    Tienda tienda=TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.get(pBorra.getNumero()-1);
+                    TiendaOrdenadoresUI.tiendaOrdenadores.borrarTienda(tienda);
+                    Resultados.setText ("La tienda se ha borrado satisfactoriamente");
                 }
             }else{
-              Resultados.setText ("No hay escuderias");
+              Resultados.setText ("No hay tiendas");
             }
         }
-    //Consultar Escuderia
-        else if(bConsultarEscuderia.isSelected()){
-          if(!Formula1UI.formula1.escuderias.isEmpty()){
-            jpConsultaEscuderia pConsulta = new jpConsultaEscuderia();
-            if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Escuderia",
+    //Consultar Tienda
+        else if(bConsultarTienda.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.isEmpty()){
+            jpConsultaTienda pConsulta = new jpConsultaTienda();
+            if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Tienda",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<Formula1UI.formula1.numeroEscuderias()+1)){
+                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<TiendaOrdenadoresUI.tiendaOrdenadores.numeroTiendas()+1)){
                         Resultados.setText ("");
-                        Escuderia escuderia=Formula1UI.formula1.escuderias.get(pConsulta.getNumero()-1);
-                        Resultados.setText (escuderia.toString());
+                        Tienda tienda=TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.get(pConsulta.getNumero()-1);
+                        Resultados.setText (tienda.toString());
                     }else{
-                        Resultados.setText ("El identificador de escuderia no es correcto");
+                        Resultados.setText ("El identificador de tienda no es correcto");
                     }
                 }
             }else{
-                Resultados.setText ("No hay escuderias");
+                Resultados.setText ("No hay tiendas");
             }
         }
         
-    //Añade Piloto
-        if(bAnyadirPiloto.isSelected()){
-            jpAñadePiloto pAñade = new jpAñadePiloto();
-            if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Piloto",
+    //Añade Empleado
+        if(bAnyadirEmpleado.isSelected()){
+            jpAñadeEmpleado pAñade = new jpAñadeEmpleado();
+            if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Empleado",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
             == JOptionPane.OK_OPTION) {
-                    Piloto piloto = new Piloto(pAñade.getNombre(), pAñade.getApellidos(),
-                    pAñade.getDatosPersonales(), pAñade.getCaracteristicasTecnicas());
-                Formula1UI.formula1.añadirPiloto(piloto);
-                Resultados.setText ("El piloto se ha insertado satisfactoriamente");
+                    Empleado empleado = new Empleado(pAñade.getNombre(), pAñade.getApellidos(),
+                    pAñade.getSueldoBase());
+                TiendaOrdenadoresUI.tiendaOrdenadores.añadirEmpleado(empleado, pAñade.getEsEncargado());
+                Resultados.setText ("El empleado se ha insertado satisfactoriamente");
             }
         }
-    //Modificar Piloto
-        else if(bModificarPiloto.isSelected()){
+    //Modificar Emoleado
+        else if(bModificarEmpleado.isSelected()){
           if(!Formula1UI.formula1.pilotos.isEmpty()){
             jpEditaPiloto pEdita = new jpEditaPiloto();
             if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Piloto",
@@ -331,7 +378,7 @@ public class jpAdmin extends javax.swing.JFrame {
           }
         }
     //Borrar Piloto
-        else if(bBorrarPiloto.isSelected()){
+        else if(bBorrarEmpleado.isSelected()){
           if(!Formula1UI.formula1.pilotos.isEmpty()){
             jpBorraPiloto pBorra = new jpBorraPiloto();
             if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Piloto",
@@ -346,7 +393,7 @@ public class jpAdmin extends javax.swing.JFrame {
             }
         }
     //Consultar Piloto
-        else if(bConsultarPiloto.isSelected()){
+        else if(bConsultarEmpleado.isSelected()){
           if(!Formula1UI.formula1.pilotos.isEmpty()){
             jpConsultaPiloto pConsulta = new jpConsultaPiloto();
             if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Piloto",
@@ -366,7 +413,7 @@ public class jpAdmin extends javax.swing.JFrame {
         }
         
     //Añade Circuito
-        if(bAnyadirCircuito.isSelected()){
+        if(bAnyadirVendedor.isSelected()){
             jpAñadeCircuito pAñade = new jpAñadeCircuito();
             if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Circuito",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
@@ -378,7 +425,7 @@ public class jpAdmin extends javax.swing.JFrame {
             }
         }
     //Modificar Circuito
-        else if(bModificarCircuito.isSelected()){
+        else if(bModificarVendedor.isSelected()){
           if(!Formula1UI.formula1.circuitos.isEmpty()){
             jpEditaCircuito pEdita = new jpEditaCircuito();
             if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Circuito",
@@ -395,7 +442,7 @@ public class jpAdmin extends javax.swing.JFrame {
           }
         }
     //Borrar Circuito
-        else if(bBorrarCircuito.isSelected()){
+        else if(bBorrarVendedor.isSelected()){
           if(!Formula1UI.formula1.pilotos.isEmpty()){
             jpBorraCircuito pBorra = new jpBorraCircuito();
             if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Circuito",
@@ -410,7 +457,7 @@ public class jpAdmin extends javax.swing.JFrame {
             }
         }
     //Consultar Circuito
-        else if(bConsultarCircuito.isSelected()){
+        else if(bConsultarVendedor.isSelected()){
           if(!Formula1UI.formula1.circuitos.isEmpty()){
             jpConsultaCircuito pConsulta = new jpConsultaCircuito();
             if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Circuito",
@@ -430,6 +477,22 @@ public class jpAdmin extends javax.swing.JFrame {
         }
 }//GEN-LAST:event_AccionActionPerformed
 
+    private void bAnyadirTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirTiendaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bAnyadirTiendaActionPerformed
+
+    private void bVenderProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVenderProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bVenderProductoActionPerformed
+
+    private void bConsultarProducto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bConsultarProducto4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bConsultarProducto4ActionPerformed
+
+    private void bAnyadirEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAnyadirEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bAnyadirEmpleadoActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -445,22 +508,25 @@ public class jpAdmin extends javax.swing.JFrame {
     private javax.swing.JButton Accion;
     private javax.swing.ButtonGroup Agrupados;
     private javax.swing.JTextArea Resultados;
-    private javax.swing.JRadioButton bAnyadirCircuito;
-    private javax.swing.JRadioButton bAnyadirEscuderia;
-    private javax.swing.JRadioButton bAnyadirPiloto;
-    private javax.swing.JRadioButton bBorrarCircuito;
-    private javax.swing.JRadioButton bBorrarEscuderia;
-    private javax.swing.JRadioButton bBorrarPiloto;
-    private javax.swing.JRadioButton bConsultarCircuito;
-    private javax.swing.JRadioButton bConsultarEscuderia;
-    private javax.swing.JRadioButton bConsultarPiloto;
-    private javax.swing.JRadioButton bModificarCircuito;
-    private javax.swing.JRadioButton bModificarEscuderia;
-    private javax.swing.JRadioButton bModificarPiloto;
+    private javax.swing.JRadioButton bAnyadirEmpleado;
+    private javax.swing.JRadioButton bAnyadirProducto;
+    private javax.swing.JRadioButton bAnyadirTienda;
+    private javax.swing.JRadioButton bBorrarEmpleado;
+    private javax.swing.JRadioButton bBorrarProducto;
+    private javax.swing.JRadioButton bBorrarTienda;
+    private javax.swing.JRadioButton bConfigurarOrdenador;
+    private javax.swing.JRadioButton bConsultarEmpleado;
+    private javax.swing.JRadioButton bConsultarProducto2;
+    private javax.swing.JRadioButton bConsultarProducto4;
+    private javax.swing.JRadioButton bConsultarTienda;
+    private javax.swing.JRadioButton bModificarEmpleado;
+    private javax.swing.JRadioButton bModificarProducto;
+    private javax.swing.JRadioButton bModificarTienda;
+    private javax.swing.JRadioButton bVenderProducto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 

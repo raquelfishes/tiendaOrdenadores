@@ -1,3 +1,0 @@
-tiendaOrdenadores.DatosPersonales
-tiendaOrdenadores.CaracteristicasTecnicasPiloto
-tiendaOrdenadores.Piloto

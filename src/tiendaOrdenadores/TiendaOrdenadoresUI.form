@@ -25,10 +25,6 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="jAviso" max="32767" attributes="0"/>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -38,23 +34,29 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="bMundial" alignment="1" max="32767" attributes="1"/>
+                                  <Component id="bVendedor" alignment="1" max="32767" attributes="1"/>
                                   <Component id="bAdministrador" alignment="1" max="32767" attributes="1"/>
-                                  <Component id="bEscuderia" alignment="0" min="-2" pref="113" max="-2" attributes="1"/>
+                                  <Component id="bEncargado" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="Cliente" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="116" max="32767" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="bGuarda" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="bCargar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jAviso" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-              <Component id="bGuarda" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="bCargar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -66,10 +68,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="bAdministrador" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="bEscuderia" min="-2" max="-2" attributes="0"/>
+              <Component id="bEncargado" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-              <Component id="bMundial" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+              <Component id="bVendedor" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="Cliente" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bCargar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="bGuarda" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -90,25 +94,25 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bAdministradorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bEscuderia">
+    <Component class="javax.swing.JButton" name="bEncargado">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Escuderia"/>
+        <Property name="text" type="java.lang.String" value="Encargado"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bEscuderiaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bEncargadoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="bMundial">
+    <Component class="javax.swing.JButton" name="bVendedor">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Mundial URJC"/>
+        <Property name="text" type="java.lang.String" value="Vendedor"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bMundialActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bVendedorActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="bGuarda">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Guardar Formula 1"/>
+        <Property name="text" type="java.lang.String" value="Guardar Tienda Ordenadores"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bGuardaActionPerformed"/>
@@ -116,7 +120,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="bCargar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cargar Formula 1"/>
+        <Property name="text" type="java.lang.String" value="Cargar Tienda Ordenadores"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bCargarActionPerformed"/>
@@ -130,6 +134,14 @@
           <Image iconType="3" name="/tiendaOrdenadores/logo.png"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Cliente">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cliente"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClienteActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

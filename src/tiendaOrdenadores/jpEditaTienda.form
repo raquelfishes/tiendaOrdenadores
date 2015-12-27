@@ -48,7 +48,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Identificador Escuderia a modificar:"/>
+        <Property name="text" type="java.lang.String" value="Identificador Tienda a modificar:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="tId">
@@ -68,16 +68,14 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lPais" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lAnyoFundacion" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lPresupuesto" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lHorarioApertura" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lNombre" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="tPresupuesto" alignment="0" max="32767" attributes="1"/>
-                      <Component id="tAnyoFundacion" alignment="0" max="32767" attributes="1"/>
-                      <Component id="tPais" alignment="0" max="32767" attributes="1"/>
+                      <Component id="tHorarioApertura" alignment="0" max="32767" attributes="1"/>
+                      <Component id="tDireccion" alignment="0" max="32767" attributes="1"/>
                       <Group type="102" attributes="0">
                           <Component id="tNombre" min="-2" pref="252" max="-2" attributes="1"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -97,20 +95,15 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lPais" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tPais" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lAnyoFundacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tAnyoFundacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lHorarioApertura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tHorarioApertura" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lPresupuesto" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tPresupuesto" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                  <EmptySpace pref="54" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -126,35 +119,25 @@
         </Component>
         <Component class="javax.swing.JTextField" name="tNombre">
         </Component>
-        <Component class="javax.swing.JLabel" name="lAnyoFundacion">
+        <Component class="javax.swing.JLabel" name="lHorarioApertura">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="A&#xf1;o Fundaci&#xf3;n:"/>
+            <Property name="text" type="java.lang.String" value="Horario Apertura:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tAnyoFundacion">
+        <Component class="javax.swing.JTextField" name="tHorarioApertura">
         </Component>
-        <Component class="javax.swing.JLabel" name="lPais">
+        <Component class="javax.swing.JLabel" name="lDireccion">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Pais:"/>
+            <Property name="text" type="java.lang.String" value="Direcci&#xf3;n:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tPais">
-        </Component>
-        <Component class="javax.swing.JLabel" name="lPresupuesto">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="11" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Presupuesto:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="tPresupuesto">
+        <Component class="javax.swing.JTextField" name="tDireccion">
         </Component>
       </SubComponents>
     </Container>

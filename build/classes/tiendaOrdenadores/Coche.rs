@@ -1,2 +1,0 @@
-tiendaOrdenadores.Coche
-tiendaOrdenadores.CaracteristicasTecnicasCoche

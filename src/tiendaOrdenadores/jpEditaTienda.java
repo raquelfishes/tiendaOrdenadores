@@ -1,8 +1,8 @@
 package tiendaOrdenadores;
 
-public class jpEditaEscuderia extends javax.swing.JPanel{
+public class jpEditaTienda extends javax.swing.JPanel{
 
-    public jpEditaEscuderia() {
+    public jpEditaTienda() {
         initComponents();
     }
 
@@ -20,28 +20,23 @@ public class jpEditaEscuderia extends javax.swing.JPanel{
         jPanel1 = new javax.swing.JPanel();
         lNombre = new javax.swing.JLabel();
         tNombre = new javax.swing.JTextField();
-        lAnyoFundacion = new javax.swing.JLabel();
-        tAnyoFundacion = new javax.swing.JTextField();
-        lPais = new javax.swing.JLabel();
-        tPais = new javax.swing.JTextField();
-        lPresupuesto = new javax.swing.JLabel();
-        tPresupuesto = new javax.swing.JTextField();
+        lHorarioApertura = new javax.swing.JLabel();
+        tHorarioApertura = new javax.swing.JTextField();
+        lDireccion = new javax.swing.JLabel();
+        tDireccion = new javax.swing.JTextField();
 
-        jLabel1.setText("Identificador Escuderia a modificar:");
+        jLabel1.setText("Identificador Tienda a modificar:");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nuevos Datos"));
 
         lNombre.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lNombre.setText("Nombre:");
 
-        lAnyoFundacion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lAnyoFundacion.setText("Año Fundación:");
+        lHorarioApertura.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lHorarioApertura.setText("Horario Apertura:");
 
-        lPais.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lPais.setText("Pais:");
-
-        lPresupuesto.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lPresupuesto.setText("Presupuesto:");
+        lDireccion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lDireccion.setText("Dirección:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -50,15 +45,13 @@ public class jpEditaEscuderia extends javax.swing.JPanel{
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lPais)
-                    .addComponent(lAnyoFundacion)
-                    .addComponent(lPresupuesto)
+                    .addComponent(lDireccion)
+                    .addComponent(lHorarioApertura)
                     .addComponent(lNombre))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tPresupuesto)
-                    .addComponent(tAnyoFundacion)
-                    .addComponent(tPais)
+                    .addComponent(tHorarioApertura)
+                    .addComponent(tDireccion)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(tNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -73,17 +66,13 @@ public class jpEditaEscuderia extends javax.swing.JPanel{
                     .addComponent(tNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lPais)
-                    .addComponent(tPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lDireccion)
+                    .addComponent(tDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lAnyoFundacion)
-                    .addComponent(tAnyoFundacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lPresupuesto)
-                    .addComponent(tPresupuesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                    .addComponent(lHorarioApertura)
+                    .addComponent(tHorarioApertura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -120,30 +109,25 @@ public int getNumero() {
         return tNombre.getText();
     }
 
-    public String getPais() {
-        return tPais.getText();
+    public String getDireccion() {
+        return tDireccion.getText();
     }
 
-    public String getAnyoFundacion() {
-        return tAnyoFundacion.getText();
+    public String getHorarioApertura() {
+        return tHorarioApertura.getText();
     }
 
-    public String getPresupuesto() {
-        return tPresupuesto.getText();
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lAnyoFundacion;
+    private javax.swing.JLabel lDireccion;
+    private javax.swing.JLabel lHorarioApertura;
     private javax.swing.JLabel lNombre;
-    private javax.swing.JLabel lPais;
-    private javax.swing.JLabel lPresupuesto;
-    private javax.swing.JTextField tAnyoFundacion;
+    private javax.swing.JTextField tDireccion;
+    private javax.swing.JTextField tHorarioApertura;
     private javax.swing.JTextField tId;
     private javax.swing.JTextField tNombre;
-    private javax.swing.JTextField tPais;
-    private javax.swing.JTextField tPresupuesto;
     // End of variables declaration//GEN-END:variables
 
 }

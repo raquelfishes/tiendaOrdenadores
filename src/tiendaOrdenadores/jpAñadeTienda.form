@@ -37,34 +37,20 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="lDirectivos" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lPais" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tPais" max="32767" attributes="0"/>
-                          <Component id="tNombre" pref="380" max="32767" attributes="0"/>
+                          <Component id="tDireccion" max="32767" attributes="0"/>
+                          <Component id="tNombre" pref="372" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lAnyoFundacion" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lPresupuesto" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="lHorarioApertura" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tPresupuesto" max="32767" attributes="0"/>
-                          <Component id="tAnyoFundacion" pref="342" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Component id="tDirectivos" pref="384" max="32767" attributes="0"/>
+                      <Component id="tHorarioApertura" pref="328" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -81,24 +67,15 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lPais" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tPais" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lAnyoFundacion" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tAnyoFundacion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lHorarioApertura" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tHorarioApertura" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lPresupuesto" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tPresupuesto" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="lDirectivos" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="tDirectivos" pref="41" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -117,45 +94,25 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tNombreActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lPais">
+    <Component class="javax.swing.JLabel" name="lDireccion">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Pais:"/>
+        <Property name="text" type="java.lang.String" value="Direcci&#xf3;n:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tPais">
+    <Component class="javax.swing.JTextField" name="tDireccion">
     </Component>
-    <Component class="javax.swing.JLabel" name="lAnyoFundacion">
+    <Component class="javax.swing.JLabel" name="lHorarioApertura">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="A&#xf1;o Fundaci&#xf3;n:"/>
+        <Property name="text" type="java.lang.String" value="Horario Apertura:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tAnyoFundacion">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lPresupuesto">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Presupuesto:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tPresupuesto">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lDirectivos">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Directivos (Separar por comas):"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tDirectivos">
+    <Component class="javax.swing.JTextField" name="tHorarioApertura">
     </Component>
   </SubComponents>
 </Form>

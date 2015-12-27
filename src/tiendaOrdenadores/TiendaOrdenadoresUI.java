@@ -3,13 +3,14 @@ package tiendaOrdenadores;
 import java.io.*;
 import javax.swing.JOptionPane;
 
-public class Formula1UI extends javax.swing.JFrame {
+public class TiendaOrdenadoresUI extends javax.swing.JFrame {
 
-    static Formula1 formula1;
-    public Formula1UI() {
-        formula1 = new Formula1();
+    static TiendaOrdenadores tiendaOrdenadores;
+    
+    public TiendaOrdenadoresUI() {
+        tiendaOrdenadores = new TiendaOrdenadores();
         initComponents();
-        this.setTitle ("Formula 1");
+        this.setTitle ("Tienda de Ordenadores");
     }
 
     /** This method is called from within the constructor to
@@ -22,12 +23,13 @@ public class Formula1UI extends javax.swing.JFrame {
     private void initComponents() {
 
         bAdministrador = new javax.swing.JButton();
-        bEscuderia = new javax.swing.JButton();
-        bMundial = new javax.swing.JButton();
+        bEncargado = new javax.swing.JButton();
+        bVendedor = new javax.swing.JButton();
         bGuarda = new javax.swing.JButton();
         bCargar = new javax.swing.JButton();
         jAviso = new javax.swing.JLabel();
         Imagen = new javax.swing.JLabel();
+        Cliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,28 +40,28 @@ public class Formula1UI extends javax.swing.JFrame {
             }
         });
 
-        bEscuderia.setText("Escuderia");
-        bEscuderia.addActionListener(new java.awt.event.ActionListener() {
+        bEncargado.setText("Encargado");
+        bEncargado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bEscuderiaActionPerformed(evt);
+                bEncargadoActionPerformed(evt);
             }
         });
 
-        bMundial.setText("Mundial URJC");
-        bMundial.addActionListener(new java.awt.event.ActionListener() {
+        bVendedor.setText("Vendedor");
+        bVendedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bMundialActionPerformed(evt);
+                bVendedorActionPerformed(evt);
             }
         });
 
-        bGuarda.setText("Guardar Formula 1");
+        bGuarda.setText("Guardar Tienda Ordenadores");
         bGuarda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bGuardaActionPerformed(evt);
             }
         });
 
-        bCargar.setText("Cargar Formula 1");
+        bCargar.setText("Cargar Tienda Ordenadores");
         bCargar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bCargarActionPerformed(evt);
@@ -68,15 +70,19 @@ public class Formula1UI extends javax.swing.JFrame {
 
         Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendaOrdenadores/logo.png"))); // NOI18N
 
+        Cliente.setText("Cliente");
+        Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jAviso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -85,17 +91,21 @@ public class Formula1UI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(220, 220, 220)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(bMundial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bVendedor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(bAdministrador, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bEscuderia, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 116, Short.MAX_VALUE)))
+                                    .addComponent(bEncargado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Cliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 116, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bGuarda)
+                                .addGap(27, 27, 27)
+                                .addComponent(bCargar)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jAviso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(bGuarda)
-                .addGap(27, 27, 27)
-                .addComponent(bCargar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,10 +115,12 @@ public class Formula1UI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(bAdministrador)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bEscuderia)
+                .addComponent(bEncargado)
                 .addGap(13, 13, 13)
-                .addComponent(bMundial)
-                .addGap(58, 58, 58)
+                .addComponent(bVendedor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Cliente)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bCargar)
                     .addComponent(bGuarda))
@@ -120,30 +132,30 @@ public class Formula1UI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bEscuderiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEscuderiaActionPerformed
-        if(!Formula1UI.formula1.escuderias.isEmpty()){
-            jpConsultaEscuderia pConsulta = new jpConsultaEscuderia();
-            if(JOptionPane.showConfirmDialog(this, pConsulta, "Informacion Escuderia",
+    private void bEncargadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEncargadoActionPerformed
+        if(!TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.isEmpty()){
+            jpConsultaTienda pConsulta = new jpConsultaTienda();
+            if(JOptionPane.showConfirmDialog(this, pConsulta, "Informacion Tienda",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<Formula1UI.formula1.escuderias.size()+1)){
+                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<TiendaOrdenadoresUI.tiendaOrdenadores.tiendas.size()+1)){
                         jAviso.setText ("");
-                        jpEscuderia pEscudria = new jpEscuderia(pConsulta.getNumero());
-                        pEscudria.setVisible(true);
+                        jpTienda pTienda = new jpTienda(pConsulta.getNumero());
+                        pTienda.setVisible(true);
                     }else{
-                        jAviso.setText ("El identificador de escuderia no es correcto");
+                        jAviso.setText ("El identificador de tienda no es correcto");
                     }
             }
         }else{
-           jAviso.setText ("No hay escuderias");
+           jAviso.setText ("No hay tiendas");
         }
-    }//GEN-LAST:event_bEscuderiaActionPerformed
+    }//GEN-LAST:event_bEncargadoActionPerformed
 
-    private void bMundialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMundialActionPerformed
-        jpMundial pMundial = new jpMundial();
-        formula1.crearMundial();
-        pMundial.setVisible (true);
-    }//GEN-LAST:event_bMundialActionPerformed
+    private void bVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bVendedorActionPerformed
+        //jpMundial pMundial = new jpMundial();
+        //formula1.crearMundial();
+        //pMundial.setVisible (true);
+    }//GEN-LAST:event_bVendedorActionPerformed
 
     private void bAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAdministradorActionPerformed
         jpAdmin pAdmin = new jpAdmin();
@@ -159,7 +171,7 @@ public class Formula1UI extends javax.swing.JFrame {
         Ficheros fichero= new Ficheros();
         try {
             fichero.abrirEscribir(archivo.getDirectorio());
-            fichero.escribir(formula1);
+            fichero.escribir(tiendaOrdenadores);
             fichero.cerrar();
             jAviso.setText ("Se ha guardado Formula 1 en: " + archivo.getDirectorio());
         } catch (FileNotFoundException ex1) {
@@ -180,7 +192,7 @@ public class Formula1UI extends javax.swing.JFrame {
             try {
                 Ficheros fichero = new Ficheros();
                 fichero.abrirLeer(archivo.getDirectorio());
-                formula1 = fichero.leer();
+                tiendaOrdenadores = fichero.leer();
                 fichero.cerrar();
                 jAviso.setText("Se ha cargado " + archivo.getDirectorio());
             } catch (IOException ex) {
@@ -192,24 +204,29 @@ public class Formula1UI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bCargarActionPerformed
 
+    private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ClienteActionPerformed
+
     /**
     * @param args the command line arguments
     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Formula1UI().setVisible(true);
+                new TiendaOrdenadoresUI().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cliente;
     private javax.swing.JLabel Imagen;
     private javax.swing.JButton bAdministrador;
     private javax.swing.JButton bCargar;
-    private javax.swing.JButton bEscuderia;
+    private javax.swing.JButton bEncargado;
     private javax.swing.JButton bGuarda;
-    private javax.swing.JButton bMundial;
+    private javax.swing.JButton bVendedor;
     private javax.swing.JLabel jAviso;
     // End of variables declaration//GEN-END:variables
 

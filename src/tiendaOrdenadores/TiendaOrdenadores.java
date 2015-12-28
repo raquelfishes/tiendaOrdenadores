@@ -212,7 +212,58 @@ public class TiendaOrdenadores implements Serializable{
         return s.toString();
    }
     
-    // Gestionar Mundial
+    // Gestionar Producto
     
+    public void anyadirProducto(Producto producto){
+       productos.add(producto);
+    }
+    
+    public void borrarProducto(Producto producto){
+       productos.remove(producto);
+    }
+    
+    public void modificarProducto(int producto, String nombre, String apellidos,
+            float sueldoBase) throws ParseException{
+        if (!nombre.equals("")){
+            productos.get(producto-1).setNombre(nombre);
+        }
+        if (apellidos.equals("")){
+            productos.get(producto-1).setApellidos(apellidos);
+        }
+        if (sueldoBase != 0){
+            productos.get(producto-1).setSueldoBase(sueldoBase);
+        }
+    }
+    
+    public Producto consultarProducto(Producto producto){
+    for (Producto a:this.productos){
+         if (producto.getIdentificador() == a.getIdentificador()) {
+             return a;
+         }
+    }
+    return null;
+    }
+    
+    public int numeroProductos(){
+        return productos.size();
+    }
+    
+    public String mostrarProductos (){
+        StringBuilder s = new StringBuilder();
+        int p=0;
+           for (Producto pro : productos) {
+               v++;           
+               s.append("Nº "+p).append (pro.toString());
+           }
+        return s.toString();
+   }
+   
+   public void venderProducto(){
+       
+   }
+   
+   public void configurarOrdenador(){
+       
+   }
     
 }

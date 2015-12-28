@@ -15,12 +15,14 @@ public class TiendaOrdenadores implements Serializable{
     ArrayList<Encargado> encargados;
     ArrayList<Vendedor> vendedores;    
     ArrayList<Vendedor> empleados; 
+    ArrayList<Producto> productos;
     
     public TiendaOrdenadores(){
         tiendas = new ArrayList();
         encargados = new ArrayList();
         vendedores = new ArrayList();
         empleados = new ArrayList();
+        productos = new ArrayList();
     }
     
     // Gestionar tiendas

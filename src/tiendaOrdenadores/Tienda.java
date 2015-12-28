@@ -37,6 +37,10 @@ public class Tienda implements Serializable, Comparable<Tienda>{
         
     }
     
+    public int getNumeroProductos(){
+        return productos.size();
+    }
+    
     //Getters y Setters
 
     public int getIdentificador() {

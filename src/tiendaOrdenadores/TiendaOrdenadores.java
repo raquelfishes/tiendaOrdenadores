@@ -14,11 +14,13 @@ public class TiendaOrdenadores implements Serializable{
     ArrayList<Tienda> tiendas;
     ArrayList<Encargado> encargados;
     ArrayList<Vendedor> vendedores;    
+    ArrayList<Vendedor> empleados; 
     
     public TiendaOrdenadores(){
         tiendas = new ArrayList();
         encargados = new ArrayList();
         vendedores = new ArrayList();
+        empleados = new ArrayList();
     }
     
     // Gestionar tiendas
@@ -69,6 +71,52 @@ public class TiendaOrdenadores implements Serializable{
         tienda.consultarCatalogo();
         return "";
     }
+    
+    // Gestionar empleados
+    
+    public void añadirEmpleado(Empleado empleado){
+       empleados.add(empleado);
+    }
+    
+    public void borrarEmpleado(Empleado empleado){
+       empleados.remove(empleado);
+    }
+    
+    public void modificarEmpleado(int empleado ,String nombre, String apellidos,
+            float sueldoBase) throws ParseException{
+        if (!nombre.equals("")){
+            empleados.get(empleado-1).setNombre(nombre);
+        }
+        if (!apellidos.equals("")){
+            empleados.get(empleado-1).setApellidos(apellidos);
+        }
+        if (sueldoBase != 0){
+            empleados.get(empleado-1).setSueldoBase(sueldoBase);
+        }
+    }
+    
+    public Encargado consultarEmpleado(Empleado empleado){
+    for (Encargado a:this.empleados){
+         if (empleado.getIdentificador() == a.getIdentificador()) {
+             return a;
+         }
+    }
+    return null;
+    }
+    
+    public int numeroEmpleados(){
+        return encargados.size();
+    }
+    
+    public String mostrarEmpleados (){
+        StringBuilder s = new StringBuilder();
+        int e=0;
+           for (Empleado em : empleados) {
+               e++;           
+               s.append("Nº "+e).append (en.toString());
+           }
+        return s.toString();
+   }
     
     // Gestionar encargados
     

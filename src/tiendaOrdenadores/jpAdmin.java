@@ -362,49 +362,51 @@ public class jpAdmin extends javax.swing.JFrame {
         }
     //Modificar Emoleado
         else if(bModificarEmpleado.isSelected()){
-          if(!Formula1UI.formula1.pilotos.isEmpty()){
-            jpEditaPiloto pEdita = new jpEditaPiloto();
-            if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Piloto",
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.empleados.isEmpty()){
+            jpEditaEmpleado pEdita = new jpEditaEmpleado();
+            if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Empleado",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
             == JOptionPane.OK_OPTION) {
                 try {
-                    Formula1UI.formula1.modificarPiloto(pEdita.getNumero()-1, pEdita.getNombre(), 
-                            pEdita.getApellidos(), pEdita.getDatosPersonales());
+                    TiendaOrdenadoresUI.tiendaOrdenadores.modificarEmpleado(pEdita.getNumero()-1, pEdita.getNombre(), 
+                            pEdita.getApellidos(), pEdita.getSueldoBase());
                 } catch (ParseException ex) {
                     Logger.getLogger(jpAdmin.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                Resultados.setText ("El piloto se ha modificado satisfactoriamente");
+                Resultados.setText ("El empleado se ha modificado satisfactoriamente");
             }
-          }
+          }else{
+              Resultados.setText ("No hay empleados");
+            }
         }
-    //Borrar Piloto
+    //Borrar Empleado
         else if(bBorrarEmpleado.isSelected()){
-          if(!Formula1UI.formula1.pilotos.isEmpty()){
-            jpBorraPiloto pBorra = new jpBorraPiloto();
-            if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Piloto",
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.empleados.isEmpty()){
+            jpBorraEmpleado pBorra = new jpBorraEmpleado();
+            if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Empleado",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    Piloto piloto=Formula1UI.formula1.pilotos.get(pBorra.getNumero()-1);
-                    Formula1UI.formula1.borrarPiloto(piloto);
-                    Resultados.setText ("El piloto se ha borrado satisfactoriamente");
+                    Empleado empleado=TiendaOrdenadoresUI.tiendaOrdenadores.empleados.get(pBorra.getNumero()-1);
+                    TiendaOrdenadoresUI.tiendaOrdenadores.borrarEmpleado(empleado);
+                    Resultados.setText ("El empleado se ha borrado satisfactoriamente");
                 }
             }else{
-              Resultados.setText ("No hay pilotos");
+              Resultados.setText ("No hay empleados");
             }
         }
-    //Consultar Piloto
+    //Consultar Empleado
         else if(bConsultarEmpleado.isSelected()){
-          if(!Formula1UI.formula1.pilotos.isEmpty()){
-            jpConsultaPiloto pConsulta = new jpConsultaPiloto();
-            if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Piloto",
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.empleados.isEmpty()){
+            jpConsultaEmpleado pConsulta = new jpConsultaEmpleado();
+            if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Empleado",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<Formula1UI.formula1.numeroPilotos()+1)){
-                        Piloto piloto=Formula1UI.formula1.pilotos.get(pConsulta.getNumero()-1);
-                        Piloto x= Formula1UI.formula1.consultarPiloto(piloto);
+                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<TiendaOrdenadoresUI.tiendaOrdenadores.numeroEmpleados()+1)){
+                        Empleado empleado=TiendaOrdenadoresUI.tiendaOrdenadores.empleados.get(pConsulta.getNumero()-1);
+                        Empleado x= TiendaOrdenadoresUI.tiendaOrdenadores.consultarEmpleado(empleado);
                         Resultados.setText (x.toString());
                     }else{
-                        Resultados.setText ("El identificador de piloto no es correcto");
+                        Resultados.setText ("El identificador de empleado no es correcto");
                     }
                 }
             }else{
@@ -412,67 +414,106 @@ public class jpAdmin extends javax.swing.JFrame {
             }
         }
         
-    //Añade Circuito
-        if(bAnyadirVendedor.isSelected()){
-            jpAñadeCircuito pAñade = new jpAñadeCircuito();
-            if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Circuito",
+    //Añade Producto
+        if(bAnyadirProducto.isSelected()){
+            jpAñadeProducto pAñade = new jpAñadeProducto();
+            if(JOptionPane.showConfirmDialog(this, pAñade, "Añade Producto",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
             == JOptionPane.OK_OPTION) {
-                    Circuito circuito = new Circuito(pAñade.getNombre(), pAñade.getAforo(),
-                    pAñade.getCanon(), pAñade.getNumRectas(), pAñade.getNumCurvas());
-                Formula1UI.formula1.añadirCircuito(circuito);
-                Resultados.setText ("El circuito se ha insertado satisfactoriamente");
+                Producto producto = new Producto(pAñade.getNombre(), pAñade.getDescripcion(), pAñade.getPrecio(), pAñade.getValor(), pAñade.getCapacidad());
+                TiendaOrdenadoresUI.tiendaOrdenadores.añadirProducto(producto);
+                Resultados.setText ("El producto se ha insertado satisfactoriamente");
             }
         }
-    //Modificar Circuito
-        else if(bModificarVendedor.isSelected()){
-          if(!Formula1UI.formula1.circuitos.isEmpty()){
-            jpEditaCircuito pEdita = new jpEditaCircuito();
-            if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Circuito",
+    //Modificar Producto
+        else if(bModificarProducto.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.productos.isEmpty()){
+            jpEditaProducto pEdita = new jpEditaProducto();
+            if(JOptionPane.showConfirmDialog(this, pEdita, "Modificar Producto",
             JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
             == JOptionPane.OK_OPTION) {
                 try {
-                    Formula1UI.formula1.modificarCircuito(pEdita.getNumero()-1, pEdita.getNombre(), 
-                            pEdita.getAforo(), pEdita.getCanon());
+                    TiendaOrdenadoresUI.tiendaOrdenadores.modificarProducto(pEdita.getNumero()-1, pEdita.getNombre(), 
+                            pEdita.getDescripcion(), pEdita.getPrecio(), pEdita.getValor(), pEdita.getCapacidad());
                 } catch (ParseException ex) {
                     Logger.getLogger(jpAdmin.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                Resultados.setText ("El circuito se ha modificado satisfactoriamente");
+                Resultados.setText ("El producto se ha modificado satisfactoriamente");
             }
-          }
+          }else{
+              Resultados.setText ("No hay productos");
+            }
         }
-    //Borrar Circuito
-        else if(bBorrarVendedor.isSelected()){
-          if(!Formula1UI.formula1.pilotos.isEmpty()){
-            jpBorraCircuito pBorra = new jpBorraCircuito();
-            if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Circuito",
+    //Borrar Producto
+        else if(bBorrarProducto.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.productos.isEmpty()){
+            jpBorraProducto pBorra = new jpBorraProducto();
+            if(JOptionPane.showConfirmDialog(this, pBorra, "Borrar Producto",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    Circuito circuito=Formula1UI.formula1.circuitos.get(pBorra.getNumero()-1);
-                    Formula1UI.formula1.borrarCircuito(circuito);
-                    Resultados.setText ("El circuito se ha borrado satisfactoriamente");
+                    Producto producto=TiendaOrdenadoresUI.tiendaOrdenadores.productos.get(pBorra.getNumero()-1);
+                    TiendaOrdenadoresUI.tiendaOrdenadores.borrarProducto(producto);
+                    Resultados.setText ("El producto se ha borrado satisfactoriamente");
                 }
             }else{
-              Resultados.setText ("No hay circuitos");
+              Resultados.setText ("No hay productos");
             }
         }
-    //Consultar Circuito
-        else if(bConsultarVendedor.isSelected()){
-          if(!Formula1UI.formula1.circuitos.isEmpty()){
-            jpConsultaCircuito pConsulta = new jpConsultaCircuito();
-            if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Circuito",
+    //Consultar Producto
+        else if(bConsultarProducto.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.productos.isEmpty()){
+            jpConsultaProducto pConsulta = new jpConsultaProducto();
+            if(JOptionPane.showConfirmDialog(this, pConsulta, "Consultar Producto",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
                 == JOptionPane.OK_OPTION) {
-                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<Formula1UI.formula1.numeroCircuitos()+1)){
-                        Circuito circuito=Formula1UI.formula1.circuitos.get(pConsulta.getNumero()-1);
-                        Circuito x= Formula1UI.formula1.consultarCircuito(circuito);
+                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<TiendaOrdenadoresUI.tiendaOrdenadores.numeroProductos()+1)){
+                        Producto producto=TiendaOrdenadoresUI.tiendaOrdenadores.productos.get(pConsulta.getNumero()-1);
+                        Producto x= TiendaOrdenadoresUI.tiendaOrdenadores1.consultarProducto(producto);
                         Resultados.setText (x.toString());
                     }else{
-                        Resultados.setText ("El identificador de circuito no es correcto");
+                        Resultados.setText ("El identificador de producto no es correcto");
                     }
                 }
             }else{
-                Resultados.setText ("No hay circuitos");
+                Resultados.setText ("No hay productos");
+            }
+        }
+    //Vender Producto
+        else if(bVenderProducto.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.productos.isEmpty()){
+            jpConsultaProducto pVende = new jpConsultaProducto();
+            if(JOptionPane.showConfirmDialog(this, pConsulta, "Vender Producto",
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
+                == JOptionPane.OK_OPTION) {
+                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<TiendaOrdenadoresUI.tiendaOrdenadores.numeroProductos()+1)){
+                        Producto producto=TiendaOrdenadoresUI.tiendaOrdenadores.productos.get(pConsulta.getNumero()-1);
+                        Producto x= TiendaOrdenadoresUI.tiendaOrdenadores1.venderProducto(producto);
+                        Resultados.setText ("El producto se ha vendido correctamente");
+                    }else{
+                        Resultados.setText ("El identificador de producto no es correcto");
+                    }
+                }
+            }else{
+                Resultados.setText ("No hay productos");
+            }
+        }
+    //Configurar ordenador
+        else if(bConfigurarOrdenador.isSelected()){
+          if(!TiendaOrdenadoresUI.tiendaOrdenadores.productos.isEmpty()){
+            jpConfiguraOrdenador pConfigura = new jpConfiguraOrdenador();
+            if(JOptionPane.showConfirmDialog(this, pConsulta, "Configurar Ordenador",
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE)
+                == JOptionPane.OK_OPTION) {
+                    if ((pConsulta.getNumero()>0) && (pConsulta.getNumero()<TiendaOrdenadoresUI.tiendaOrdenadores.numeroProductos()+1)){
+                        //Producto producto=TiendaOrdenadoresUI.tiendaOrdenadores.productos.get(pConsulta.getNumero()-1);
+                        //Producto x= TiendaOrdenadoresUI.tiendaOrdenadores1.venderProducto(producto);
+                        Resultados.setText ("El ordenador se ha configurado correctamente");
+                    }else{
+                        Resultados.setText ("El identificador de producto no es correcto");
+                    }
+                }
+            }else{
+                Resultados.setText ("No hay productos para poder configurar un ordenador");
             }
         }
 }//GEN-LAST:event_AccionActionPerformed

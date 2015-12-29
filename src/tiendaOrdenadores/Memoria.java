@@ -33,6 +33,11 @@ public class Memoria extends Producto{
         this.capacidad = capacidad;
     }
     
+    public String toString(){
+        String s = super.toString();
+        s.append(" tipo: " + tipo + " capacidad: " + capacidad);
+        return s;
+    }
     
     
 }

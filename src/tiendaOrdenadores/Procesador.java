@@ -36,5 +36,10 @@ public class Procesador extends Producto{
         this.capacidad = capacidad;
     }
     
+    public String toString(){
+        String s = super.toString();
+        s.append(" marca: " + marca + " capacidad: " + capacidad);
+        return s;
+    }
 
 }

@@ -16,6 +16,7 @@ public class Tienda implements Serializable, Comparable<Tienda>{
     private String direccion;
     private String horario;
     private int totalVentas;
+    private float valorTotalVentas;
 
     private Encargado encargado;
     private ArrayList<Vendedor> vendedores;
@@ -31,10 +32,29 @@ public class Tienda implements Serializable, Comparable<Tienda>{
         productos = new ArrayList();
         vendedores = new ArrayList();
         totalVentas = 0;
+        valorTotalVentas;
     }
     
     public void consultarCatalogo(){
         
+    }
+    
+    public void nuevaVenta(Producto producto){
+        if (buscarProducto(producto.getNombre())){
+            totalVentas++;
+            valorTotalVentas += producto.getPrecio();
+        }
+    }
+    
+    public void nuevaVenta(Producto producto, Vendedor vendedor){
+        if (buscarProducto(producto.getNombre())){
+            totalVentas++;
+            valorTotalVentas += producto.getPrecio();
+            for (Vendedor v:this.vendedores){
+                if (vendedor.getIdentificador() == v.getIdentificador()) {
+                    v.sumaVenta(producto.getPrecio());
+                }
+        }
     }
     
     public int getNumeroProductos(){

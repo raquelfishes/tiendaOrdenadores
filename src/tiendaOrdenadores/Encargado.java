@@ -9,15 +9,17 @@ import java.io.Serializable;
 
 public class Encargado extends Empleado{
     
-    int plusPeligrosidad = 50;
+    int porcentajeVentas = 50;
 
     public Encargado(String n, String a) {
         super(n, a);
     }
     
+    public float calcularSueldo(float ventasTienda){
+        return super.calcularSueldo() + ventasTienda * porcentajeVentas;
+    }
     
-    
-    public Empleado getEmplead0(){
+    public Empleado getEmpleado(){
         return super.getEmpleado();
     }
     

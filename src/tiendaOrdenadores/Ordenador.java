@@ -30,4 +30,20 @@ public class Ordenador extends Producto{
         discosDuros.add(d);
     }
     
+    public String toString(){
+        String s = " ";
+        for (Processador pro : procesadores) {           
+            s.append (pro.toString());
+        }
+        
+        for (Memoria me : memorias) {           
+            s.append (me.toString());
+        }
+        
+        for (DiscoDuro dd : discoDuro) {           
+            s.append (dd.toString());
+        }
+        return s;
+    }
+    
 }

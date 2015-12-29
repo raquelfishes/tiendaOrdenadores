@@ -258,8 +258,13 @@ public class TiendaOrdenadores implements Serializable{
         return s.toString();
    }
    
-   public void venderProducto(){
-       
+   public void venderProducto(Producto producto){
+       for (Tienda ti: tiendas){
+           if (ti.tieneProducto(producto)){
+               ti.nuevaVenta(producto);
+           }
+       }
+       productos.remove(producto);
    }
    
    public void configurarOrdenador(){

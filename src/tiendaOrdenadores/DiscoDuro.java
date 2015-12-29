@@ -35,6 +35,10 @@ public class DiscoDuro extends Producto{
         this.capacidad = capacidad;
     }
     
-    
+    public String toString(){
+        String s = super.toString();
+        s.append(" fabricante: " + fabricante + " capacidad: " + capacidad);
+        return s;
+    }
      
 }

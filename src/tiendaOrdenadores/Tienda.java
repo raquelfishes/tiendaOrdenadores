@@ -41,6 +41,14 @@ public class Tienda implements Serializable, Comparable<Tienda>{
         return productos.size();
     }
     
+    public void addVendedor(Vendedor vendedor){
+        vendedores.add(vendedor);
+    }
+    
+    public void bajaVendedor(Vendedor vendedor){
+        vendedores.remove(vendedor);
+    }
+    
     //Getters y Setters
 
     public int getIdentificador() {

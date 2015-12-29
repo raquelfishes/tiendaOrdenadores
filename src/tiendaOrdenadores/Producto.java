@@ -11,12 +11,16 @@ import java.util.Collections;
 
 public class Producto implements Serializable{
     
+    static int contador = 0;
+    private int identificador;
     protected String nombre;
     protected String descripcion;
     protected float precio;
     
     
     public Producto(String n, String d, float p){
+        contador++;
+        identificador = contador;
         nombre = n;
         descripcion = d;
         precio = p;
@@ -52,7 +56,15 @@ public class Producto implements Serializable{
     public Producto getProducto() {
         return this;
     }
-
     
+    public String toString(){
+        s.append(" tipo: " + tipo + " capacidad: " + capacidad);
+        return s;
+    }
+
+    public String toString(){
+        return "  Identificador: " + identificador + " Nombre: " + nombre + " Descripcion: " + descripcion + 
+                  " Precio: " + precio + "\n";
+    }
     
 }

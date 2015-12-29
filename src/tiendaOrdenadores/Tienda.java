@@ -49,6 +49,15 @@ public class Tienda implements Serializable, Comparable<Tienda>{
         vendedores.remove(vendedor);
     }
     
+    public boolean buscarProducto(String nombre){
+        for (Producto pro: productos){
+            if (pro.getNombre().equals(nombre)){
+                return True;
+            }
+        }
+        return False;
+    }
+    
     //Getters y Setters
 
     public int getIdentificador() {
